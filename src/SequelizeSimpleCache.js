@@ -1,6 +1,7 @@
 const md5 = require('md5');
 const { inspect } = require('util');
 const assert = require('assert');
+const { cloneDeep } = require('lodash-es');
 
 class SequelizeSimpleCache {
   constructor(config = {}, options = {}) {
@@ -105,7 +106,7 @@ class SequelizeSimpleCache {
             const { data, expires } = item;
             if (!expires || expires > Date.now()) {
               this.log('hit', { key, hash, expires });
-              return data; // resolve from cache
+              return cloneDeep(data); // resolve from cache
             }
           }
           this.log('miss', { key, hash });
@@ -120,7 +121,7 @@ class SequelizeSimpleCache {
                 this.purge(type);
               }
             }
-            return data; // resolve from database
+            return cloneDeep(data); // resolve from database
           });
         };
         // proxy for supporting Sinon-decorated properties on mocked model functions
