@@ -4,11 +4,11 @@
   "description": "A simple, transparent, client-side, in-memory cache for Sequelize",
   "main": "src/index.js",
   "types": "src/index.d.ts",
-  "author": "Frank Thelen",
+  "author": "Naftali",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git://github.com/funny-bytes/sequelize-simple-cache"
+    "url": "git://github.com/naftali100/less-simple-sequelize-cache"
   },
   "keywords": [
     "Sequelize",
@@ -63,6 +63,7 @@
     "typescript": "^4.7.4"
   },
   "dependencies": {
+    "lodash-es": "^4.17.21",
     "md5": "^2.3.0"
   }
 }
