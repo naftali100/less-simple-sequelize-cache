@@ -1,5 +1,7 @@
 # sequelize-simple-cache
 
+### this fork is for my personal use with one little change: the data is cloned before it is returned to avoid data changes in cache
+
 This is a simple, transparent, client-side, in-memory cache for [Sequelize](https://github.com/sequelize/sequelize).
 Cache invalidation is based on time-to-live (ttl).
 Selectively add your Sequelize models to the cache.
