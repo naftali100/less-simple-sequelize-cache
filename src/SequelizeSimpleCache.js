@@ -1,7 +1,7 @@
 const md5 = require('md5');
 const { inspect } = require('util');
 const assert = require('assert');
-const { cloneDeep } = require('lodash-es');
+const { cloneDeep } = require('lodash');
 
 class SequelizeSimpleCache {
   constructor(config = {}, options = {}) {
